@@ -25,7 +25,10 @@ public class WebDriverSetUp {
         switch (browser) {
             case CHROME:
                 // Takes the system proxy settings automatically
-                driver = new ChromeDriver();
+                System.setProperty("webdriver.chrome.driver","C:/Users/Cibin/Desktop/BusyQA/chrome-win64/chromedriver.exe");
+                ChromeOptions co=new ChromeOptions();
+                co.setBinary("C:/Users/Cibin/Desktop/BusyQA/chrome-win64/chrome.exe");
+                driver = new ChromeDriver(co);
                 break;
 
             case CHROME_HEADLESS:
