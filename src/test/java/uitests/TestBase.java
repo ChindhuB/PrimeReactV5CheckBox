@@ -19,7 +19,7 @@ public class TestBase {
 
     @BeforeTest
     @Parameters("browser")
-    public  void setUp(String browser) {
+    public  void setUp(@Optional("chrome")String browser) {
         cs=new CaptureScreen();
         browserparam=browser.toUpperCase();
         URL = WebDriverSetUp.getProperties().getProperty("url");
