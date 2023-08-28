@@ -5,6 +5,7 @@
 package utils;
 
 import config.ConfigProperty;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -41,15 +42,17 @@ public class WebDriverSetUp {
 
             case FIREFOX:
                 // Takes the system proxy settings automatically
+                WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions fo=new FirefoxOptions();
-                fo.setBinary("./cache");
+                fo.setBinary("/.cache/selenium");
                 driver = new FirefoxDriver();
                 break;
 
             case EDGE:
                 // Takes the system proxy settings automatically
+                WebDriverManager.edgedriver().setup();
                 EdgeOptions eo=new EdgeOptions();
-                eo.setBinary("./cache");
+                eo.setBinary("/.cache/selenium");
                 driver = new EdgeDriver();
                 break;
 
