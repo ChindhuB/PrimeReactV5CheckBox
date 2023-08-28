@@ -9,7 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Properties;
@@ -39,11 +41,15 @@ public class WebDriverSetUp {
 
             case FIREFOX:
                 // Takes the system proxy settings automatically
+                FirefoxOptions fo=new FirefoxOptions();
+                fo.setBinary("./cache/selenium");
                 driver = new FirefoxDriver();
                 break;
 
             case EDGE:
                 // Takes the system proxy settings automatically
+                EdgeOptions eo=new EdgeOptions();
+                eo.setBinary("./cache/selenium");
                 driver = new EdgeDriver();
                 break;
 
