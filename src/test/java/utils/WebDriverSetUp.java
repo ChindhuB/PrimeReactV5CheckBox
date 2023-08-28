@@ -44,7 +44,7 @@ public class WebDriverSetUp {
                 // Takes the system proxy settings automatically
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions fo=new FirefoxOptions();
-                fo.setBinary("/.cache/selenium");
+                fo.setBinary("~/.cache/selenium");
                 driver = new FirefoxDriver();
                 break;
 
@@ -52,7 +52,7 @@ public class WebDriverSetUp {
                 // Takes the system proxy settings automatically
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions eo=new EdgeOptions();
-                eo.setBinary("/.cache/selenium");
+                eo.setBinary("~/.cache/selenium");
                 driver = new EdgeDriver();
                 break;
 
