@@ -42,14 +42,14 @@ public class WebDriverSetUp {
             case FIREFOX:
                 // Takes the system proxy settings automatically
                 FirefoxOptions fo=new FirefoxOptions();
-                fo.setBinary("./cache/selenium");
+                fo.setBinary("./cache");
                 driver = new FirefoxDriver();
                 break;
 
             case EDGE:
                 // Takes the system proxy settings automatically
                 EdgeOptions eo=new EdgeOptions();
-                eo.setBinary("./cache/selenium");
+                eo.setBinary("./cache");
                 driver = new EdgeDriver();
                 break;
 
