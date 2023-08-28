@@ -24,7 +24,6 @@
         <parameter name="browser" value="edge"/>
         <classes>
             <class name="uitests.TestDataTable"/>
-            <class name="uitests.TestApi"/>
         </classes>
     </test>
 </suite>
