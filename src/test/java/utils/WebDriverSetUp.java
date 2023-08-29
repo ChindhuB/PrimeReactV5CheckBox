@@ -47,7 +47,7 @@ public class WebDriverSetUp {
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions fo=new FirefoxOptions();
                 //fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/firefox.exe")));
-                fo.setBinary("/usr/bin/firefox.exe");
+                fo.setBinary("~/usr/bin/firefox.exe");
                 driver = new FirefoxDriver(fo);
                 break;
 
