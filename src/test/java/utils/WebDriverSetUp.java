@@ -44,7 +44,7 @@ public class WebDriverSetUp {
                 // Takes the system proxy settings automatically
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions fo=new FirefoxOptions();
-                fo.setBinary("~/.cache/selenium");
+                fo.setBinary("/tmp/firefox/firefox.exe");
                 driver = new FirefoxDriver();
                 break;
 
