@@ -55,7 +55,7 @@ public class WebDriverSetUp {
                 // Takes the system proxy settings automatically
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions eo=new EdgeOptions();
-                eo.setBinary("~/.cache/selenium");
+                eo.setBinary("/usr/bin/msedge");
                 driver = new EdgeDriver(eo);
                 break;
 
