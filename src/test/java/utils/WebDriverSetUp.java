@@ -11,10 +11,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.File;
 import java.util.Properties;
 
 public class WebDriverSetUp {
@@ -44,7 +46,8 @@ public class WebDriverSetUp {
                 // Takes the system proxy settings automatically
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions fo=new FirefoxOptions();
-                fo.setBinary("~/usr/tmp/firefox/firefox.exe");
+                fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/")));
+                //fo.setBinary("~/usr/tmp/firefox/firefox.exe");
                 driver = new FirefoxDriver();
                 break;
 
