@@ -11,7 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -44,11 +43,12 @@ public class WebDriverSetUp {
 
             case FIREFOX:
                 // Takes the system proxy settings automatically
-                WebDriverManager.firefoxdriver().setup();
+
                 FirefoxOptions fo=new FirefoxOptions();
                 //fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/firefox.exe")));
                 fo.setBinary("/usr/bin/firefox");
                 fo.addArguments("--headless");
+                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver(fo);
                 break;
 
@@ -57,7 +57,7 @@ public class WebDriverSetUp {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions eo=new EdgeOptions();
                 eo.setBinary("/usr/bin/msedge");
-                driver = new EdgeDriver(eo);
+                driver = new EdgeDriver();
                 break;
 
             default:
