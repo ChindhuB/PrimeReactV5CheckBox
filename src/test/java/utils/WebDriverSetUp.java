@@ -46,7 +46,7 @@ public class WebDriverSetUp {
 
                 FirefoxOptions fo=new FirefoxOptions();
                 //fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/firefox.exe")));
-                fo.setBinary("/firefox");
+                fo.setBinary("/usr/local/bin");
                 fo.addArguments("--headless");
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver(fo);
@@ -57,7 +57,7 @@ public class WebDriverSetUp {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions eo=new EdgeOptions();
                 eo.setBinary("/usr/bin/msedge");
-                driver = new EdgeDriver();
+                driver = new EdgeDriver(eo);
                 break;
 
             default:
