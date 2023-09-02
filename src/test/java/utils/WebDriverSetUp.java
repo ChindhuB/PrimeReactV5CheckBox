@@ -59,9 +59,9 @@ public class WebDriverSetUp {
                     e.printStackTrace();
                 }
                 WebDriverManager.firefoxdriver().setup();
-                Optional<Path> browserPath1 = WebDriverManager.firefoxdriver()
+               /* Optional<Path> browserPath1 = WebDriverManager.firefoxdriver()
                         .getBrowserPath();
-                System.out.println(browserPath1);
+                System.out.println(browserPath1);*/
                 driver = new FirefoxDriver(fo);
 
                 break;
