@@ -51,7 +51,7 @@ public class WebDriverSetUp {
                 //fo.setBinary("~/usr/bin/firefox.exe");
                // fo.addArguments("--headless");
                 try {
-                    System.out.println(Runtime.getRuntime().exec("whoami"));
+                    System.out.println("! 1 "+Runtime.getRuntime().exec("whoami"));
                     System.out.println(System.getProperty("user.dir"));
                 } catch (IOException e) {
                     e.printStackTrace();
