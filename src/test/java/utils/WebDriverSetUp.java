@@ -16,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Properties;
 
 public class WebDriverSetUp {
@@ -30,6 +31,7 @@ public class WebDriverSetUp {
             case CHROME:
                 // Takes the system proxy settings automatically
                 System.setProperty("webdriver.chrome.driver","C:/Users/Cibin/Desktop/BusyQA/chrome-win64/chromedriver.exe");
+
                 ChromeOptions co=new ChromeOptions();
                 co.setBinary("C:/Users/Cibin/Desktop/BusyQA/chrome-win64/chrome.exe");
                 driver = new ChromeDriver(co);
@@ -47,7 +49,13 @@ public class WebDriverSetUp {
                 FirefoxOptions fo=new FirefoxOptions();
                 //fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/firefox.exe")));
                 //fo.setBinary("~/usr/bin/firefox.exe");
-                fo.addArguments("--headless");
+               // fo.addArguments("--headless");
+                try {
+                    System.out.println(Runtime.getRuntime().exec("whoami"));
+                    System.out.println(System.getProperty("user.dir"));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver(fo);
                 break;
