@@ -49,15 +49,16 @@ public class WebDriverSetUp {
                 FirefoxOptions fo=new FirefoxOptions();
                 //fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/firefox.exe")));
                 //fo.setBinary("~/usr/bin/firefox.exe");
-               // fo.addArguments("--headless");
+                fo.addArguments("--headless");
+
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver(fo);
                 try {
                     System.out.println("! 1 "+Runtime.getRuntime().exec("whoami"));
                     System.out.println(System.getProperty("user.dir"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver(fo);
                 break;
 
             case EDGE:
