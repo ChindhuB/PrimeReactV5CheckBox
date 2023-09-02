@@ -17,6 +17,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Optional;
 import java.util.Properties;
 
 public class WebDriverSetUp {
@@ -49,7 +51,7 @@ public class WebDriverSetUp {
                 FirefoxOptions fo=new FirefoxOptions();
                 //fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/firefox.exe")));
                 //fo.setBinary("~/usr/bin/firefox.exe");
-                fo.addArguments("--headless");
+                //fo.addArguments("--headless");
                 try {
                     System.out.println(System.getProperty("user.name"));
                     System.out.println(System.getProperty("user.dir"));
@@ -57,6 +59,9 @@ public class WebDriverSetUp {
                     e.printStackTrace();
                 }
                 WebDriverManager.firefoxdriver().setup();
+                Optional<Path> browserPath1 = WebDriverManager.firefoxdriver()
+                        .getBrowserPath();
+                System.out.println(browserPath1);
                 driver = new FirefoxDriver(fo);
 
                 break;
