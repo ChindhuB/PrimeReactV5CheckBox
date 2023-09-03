@@ -4,15 +4,15 @@
     <listeners>
         <listener class-name="utils.CustomListener"/>
     </listeners>
-
+<!--
     <test name="DataTable Test Chrome">
         <parameter name="browser" value="chrome_headless"/>
         <classes>
-           <!-- <class name="uitests.TestApi"/> -->
+            <class name="uitests.TestApi"/>
             <class name="uitests.TestDataTable"/>
         </classes>
 
-    </test>
+    </test> -->
 
         <test name="DataTable Test Firefox">
             <parameter name="browser" value="firefox"/>

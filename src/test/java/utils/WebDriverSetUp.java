@@ -51,7 +51,7 @@ public class WebDriverSetUp {
                 FirefoxOptions fo=new FirefoxOptions();
                 //fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/firefox.exe")));
                 //fo.setBinary("~/usr/bin/firefox.exe");
-                //fo.addArguments("--headless");
+                fo.addArguments("--headless");
                 try {
                     System.out.println(System.getProperty("user.name"));
                     System.out.println(System.getProperty("user.dir"));
