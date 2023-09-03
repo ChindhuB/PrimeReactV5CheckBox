@@ -29,7 +29,7 @@ public class TestBase {
     }
     @AfterTest
     public void tearDown(){
-        driver.quit();
+        driver.close();
     }
 
     Browser getBrowser(String browser){
