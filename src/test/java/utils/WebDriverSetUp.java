@@ -52,12 +52,12 @@ public class WebDriverSetUp {
                 //fo.setBinary(new FirefoxBinary(new File("~/usr/tmp/firefox/firefox.exe")));
                 //fo.setBinary("~/usr/bin/firefox.exe");
                 fo.addArguments("--headless");
-                try {
+                /*try {
                     System.out.println(System.getProperty("user.name"));
                     System.out.println(System.getProperty("user.dir"));
                 } catch (Exception e) {
                     e.printStackTrace();
-                }
+                }*/
                 WebDriverManager.firefoxdriver().setup();
                /* Optional<Path> browserPath1 = WebDriverManager.firefoxdriver()
                         .getBrowserPath();
