@@ -41,12 +41,13 @@ public class WebDriverSetUp {
 
             case CHROME_HEADLESS:
                 ChromeOptions chromeOptions = new ChromeOptions();
+
                 chromeOptions.addArguments("--headless");
-                /*chromeOptions.addArguments("--disable-gpu");
+                chromeOptions.addArguments("--disable-gpu");
                chromeOptions.addArguments("--no-sandbox");
                 chromeOptions.addArguments("start-maximized");
                 chromeOptions.addArguments("enable-automation");
-                chromeOptions.addArguments("--disable-infobars");*/
+                chromeOptions.addArguments("--disable-infobars");
                 chromeOptions.addArguments("--disable-dev-shm-usage");
                 driver = new ChromeDriver(chromeOptions);
                 break;
