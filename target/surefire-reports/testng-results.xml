@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-13T11:17:28 EDT" name="PrimeReactV5  Suite" finished-at="2023-09-13T11:17:52 EDT" duration-ms="24185">
+    <groups>
+    </groups>
+    <test started-at="2023-09-13T11:17:28 EDT" name="Test1" finished-at="2023-09-13T11:17:39 EDT" duration-ms="10822">
+      <class name="uitests.TestDataTable">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:uitests.TestDataTable@10e41621]" started-at="2023-09-13T11:17:29 EDT" name="setUp" finished-at="2023-09-13T11:17:38 EDT" duration-ms="8776" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkboxTest()[pri:0, instance:uitests.TestDataTable@10e41621]" started-at="2023-09-13T11:17:38 EDT" name="checkboxTest" finished-at="2023-09-13T11:17:39 EDT" duration-ms="822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:uitests.TestDataTable@10e41621]" started-at="2023-09-13T11:17:39 EDT" name="tearDown" finished-at="2023-09-13T11:17:39 EDT" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- uitests.TestDataTable -->
+    </test> <!-- Test1 -->
+    <test started-at="2023-09-13T11:17:40 EDT" name="Test2" finished-at="2023-09-13T11:17:47 EDT" duration-ms="7579">
+      <class name="uitests.TestDataTable">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:uitests.TestDataTable@619713e5]" started-at="2023-09-13T11:17:40 EDT" name="setUp" finished-at="2023-09-13T11:17:46 EDT" duration-ms="5924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkboxTest()[pri:0, instance:uitests.TestDataTable@619713e5]" started-at="2023-09-13T11:17:46 EDT" name="checkboxTest" finished-at="2023-09-13T11:17:46 EDT" duration-ms="642" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:uitests.TestDataTable@619713e5]" started-at="2023-09-13T11:17:46 EDT" name="tearDown" finished-at="2023-09-13T11:17:47 EDT" duration-ms="1005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- uitests.TestDataTable -->
+    </test> <!-- Test2 -->
+    <test started-at="2023-09-13T11:17:48 EDT" name="Test3" finished-at="2023-09-13T11:17:52 EDT" duration-ms="4740">
+      <class name="uitests.TestDataTable">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:uitests.TestDataTable@7722c3c3]" started-at="2023-09-13T11:17:48 EDT" name="setUp" finished-at="2023-09-13T11:17:52 EDT" duration-ms="3961" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkboxTest()[pri:0, instance:uitests.TestDataTable@7722c3c3]" started-at="2023-09-13T11:17:52 EDT" name="checkboxTest" finished-at="2023-09-13T11:17:52 EDT" duration-ms="614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:uitests.TestDataTable@7722c3c3]" started-at="2023-09-13T11:17:52 EDT" name="tearDown" finished-at="2023-09-13T11:17:52 EDT" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- uitests.TestDataTable -->
+    </test> <!-- Test3 -->
+  </suite> <!-- PrimeReactV5  Suite -->
+</testng-results>

@@ -1,0 +1,8 @@
+utils\BrowserVer.class
+uitests\TestBase.class
+utils\CaptureScreen.class
+utils\CustomListener.class
+uitests\TestApi.class
+utils\WebDriverSetUp.class
+uitests\TestDataTable.class
+config\ConfigProperty.class
