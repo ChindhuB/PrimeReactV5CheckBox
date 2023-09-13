@@ -6,9 +6,11 @@ package uitests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import utils.Browser;
+import utils.BrowserVer;
 import utils.CaptureScreen;
 import utils.WebDriverSetUp;
+
+import java.time.Duration;
 
 public class TestBase {
     public static String URL;
@@ -23,29 +25,33 @@ public class TestBase {
         cs=new CaptureScreen();
         browserparam=browser.toUpperCase();
         URL = WebDriverSetUp.getProperties().getProperty("url");
-        driver =WebDriverSetUp.getWebDriver(getBrowser(browserparam.toLowerCase()));
+        driver =WebDriverSetUp.getRemoteWebDriver(browserparam,"linux");
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(180));
+        System.out.println(browserparam);
         driver.get(URL);
         driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
     }
     @AfterTest
     public void tearDown(){
-        driver.close();
+        driver.quit();
     }
 
-    Browser getBrowser(String browser){
-        Browser b;
+    BrowserVer getBrowser(String browser){
+        BrowserVer b;
         switch (browser) {
             case "chrome":
-                b=Browser.CHROME;
+                b= BrowserVer.CHROME;
                 break;
             case "firefox":
-                b=Browser.FIREFOX;
+                b= BrowserVer.FIREFOX;
                 break;
             case "chrome_headless":
-                b=Browser.CHROME_HEADLESS;
+                b= BrowserVer.CHROME_HEADLESS;
                 break;
             case "edge":
-                b=Browser.EDGE;
+                b= BrowserVer.EDGE;
                 break;
             default:
                 throw new RuntimeException("Unhandled browser!");

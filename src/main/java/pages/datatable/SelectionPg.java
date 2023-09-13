@@ -17,7 +17,7 @@ public class SelectionPg extends BasePage {
 
         if (elemutil.isElementVisible(checkboxelem, driver)) {
             Rectangle rect = elemutil.findElement(checkboxelem,driver).getRect();
-            elemutil.scriptExecuteScrollWindow(driver,rect.x-500,rect.y-500);
+            elemutil.scriptExecuteScrollWindow(driver,rect.x-300,rect.y-300);
             elemutil.clickOnElement(checkboxelem, driver);
             return elemutil.getAttribute(checkboxelemchecked, "aria-checked", driver);
         } else {
