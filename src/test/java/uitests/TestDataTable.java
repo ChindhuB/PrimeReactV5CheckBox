@@ -14,7 +14,6 @@ public class TestDataTable extends TestBase {
     @Test
     public void checkboxTest() {
             SelectionPg selectPg=new SelectionPg(driver);
-
             Assert.assertTrue(selectPg.verifyCheckBox("Blue Band").equals("true"));
     }
 }
