@@ -106,6 +106,7 @@ public class WebDriverSetUp {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions co=new ChromeOptions();
                 co.setCapability("browserName",Browser.CHROME.browserName());
+                System.out.println(Browser.CHROME.browserName()+": "+remURL);
                 try {
                     driver = new RemoteWebDriver(new URL(remURL), co);
 
@@ -115,11 +116,13 @@ public class WebDriverSetUp {
                     System.out.println(e.getMessage());
 
                 }
+                System.out.println("EXIT");
                 break;
             case "FIREFOX":
                 FirefoxOptions fo=new FirefoxOptions();
                 fo.setCapability("browserName",Browser.FIREFOX.browserName());
                 WebDriverManager.firefoxdriver().setup();
+                System.out.println(Browser.FIREFOX.browserName()+": "+remURL);
                 try {
                     driver = new RemoteWebDriver(new URL(remURL), fo);;
 
@@ -129,6 +132,7 @@ public class WebDriverSetUp {
                     System.out.println(e.getMessage());
 
                 }
+                System.out.println("EXIT");
                 break;
             case "CHROME_HEADLESS":
                 WebDriverManager.chromedriver().setup();
@@ -141,6 +145,7 @@ public class WebDriverSetUp {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions eo = new EdgeOptions();
                 eo.setCapability("browserName",Browser.EDGE.browserName());
+                System.out.println(Browser.EDGE.browserName()+": "+remURL);
                 try {
                     driver = new RemoteWebDriver(new URL(remURL), eo);
 
@@ -150,6 +155,7 @@ public class WebDriverSetUp {
                     System.out.println(e.getMessage());
 
                 }
+                System.out.println("EXIT");
                 break;
             default:
                 throw new RuntimeException("Unhandled browser!");
