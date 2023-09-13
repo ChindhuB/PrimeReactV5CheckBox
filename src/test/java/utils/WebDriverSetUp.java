@@ -99,6 +99,7 @@ public class WebDriverSetUp {
                 capability.setPlatform(Platform.WINDOWS);
                 break;
             case "linux":
+                System.out.println("1 "+platform);
                 //capability.setPlatform(Platform.LINUX);
                 break;
             default:
@@ -107,6 +108,7 @@ public class WebDriverSetUp {
 
         switch (browser) {
             case "CHROME":
+                System.out.println("$1 "+browser);
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions co=new ChromeOptions();
                 co.setCapability("browserName",Browser.CHROME.browserName());
@@ -122,6 +124,7 @@ public class WebDriverSetUp {
                 }
                 break;
             case "FIREFOX":
+                System.out.println("$1 "+browser);
                 FirefoxOptions fo=new FirefoxOptions();
                 fo.setCapability("browserName",Browser.FIREFOX.browserName());
                 WebDriverManager.firefoxdriver().setup();
@@ -144,6 +147,7 @@ public class WebDriverSetUp {
                 capability.setCapability(ChromeOptions.CAPABILITY,chromeOptions);
                 break;
             case "EDGE":
+                System.out.println("$1 "+browser);
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions eo = new EdgeOptions();
                 eo.setCapability("browserName",Browser.EDGE.browserName());

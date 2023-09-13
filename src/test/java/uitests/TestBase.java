@@ -24,11 +24,13 @@ public class TestBase {
     public  void setUp(@Optional("chrome")String browser) {
         cs=new CaptureScreen();
         browserparam=browser.toUpperCase();
+        System.out.println("0 "+browserparam);
         URL = WebDriverSetUp.getProperties().getProperty("url");
+        System.out.println("1 "+browserparam);
         driver =WebDriverSetUp.getRemoteWebDriver(browserparam,"linux");
-
+        System.out.println("11 "+browserparam);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(180));
-        System.out.println(browserparam);
+        System.out.println("2 "+browserparam);
         driver.get(URL);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
